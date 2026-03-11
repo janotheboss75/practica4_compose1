@@ -1,0 +1,120 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Palomitas -->
+    <path
+        android:fillColor="#FFF8DC"
+        android:strokeColor="#E6D8A8"
+        android:strokeWidth="1.5"
+        android:pathData="M28,34
+            a10,10 0 1,1 20,0
+            a10,10 0 1,1 -20,0z"/>
+
+    <path
+        android:fillColor="#FFF8DC"
+        android:strokeColor="#E6D8A8"
+        android:strokeWidth="1.5"
+        android:pathData="M44,26
+            a11,11 0 1,1 22,0
+            a11,11 0 1,1 -22,0z"/>
+
+    <path
+        android:fillColor="#FFF8DC"
+        android:strokeColor="#E6D8A8"
+        android:strokeWidth="1.5"
+        android:pathData="M62,34
+            a10,10 0 1,1 20,0
+            a10,10 0 1,1 -20,0z"/>
+
+    <path
+        android:fillColor="#FFF8DC"
+        android:strokeColor="#E6D8A8"
+        android:strokeWidth="1.5"
+        android:pathData="M79,27
+            a10,10 0 1,1 20,0
+            a10,10 0 1,1 -20,0z"/>
+
+    <path
+        android:fillColor="#FFF8DC"
+        android:strokeColor="#E6D8A8"
+        android:strokeWidth="1.5"
+        android:pathData="M39,42
+            a9,9 0 1,1 18,0
+            a9,9 0 1,1 -18,0z"/>
+
+    <path
+        android:fillColor="#FFF8DC"
+        android:strokeColor="#E6D8A8"
+        android:strokeWidth="1.5"
+        android:pathData="M58,44
+            a9,9 0 1,1 18,0
+            a9,9 0 1,1 -18,0z"/>
+
+    <path
+        android:fillColor="#FFF8DC"
+        android:strokeColor="#E6D8A8"
+        android:strokeWidth="1.5"
+        android:pathData="M75,42
+            a9,9 0 1,1 18,0
+            a9,9 0 1,1 -18,0z"/>
+
+    <!-- Borde superior caja -->
+    <path
+        android:fillColor="#B31212"
+        android:strokeColor="#991111"
+        android:strokeWidth="1.5"
+        android:pathData="M30,48
+            L98,48
+            Q101,48 101,51
+            L101,56
+            Q101,59 98,59
+            L30,59
+            Q27,59 27,56
+            L27,51
+            Q27,48 30,48z"/>
+
+    <!-- Caja principal -->
+    <path
+        android:fillColor="#E53935"
+        android:strokeColor="#991111"
+        android:strokeWidth="2"
+        android:pathData="M32,59 L96,59 L86,108 L42,108 Z"/>
+
+    <!-- Franjas blancas -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,59 L52,59 L49,108 L40,108 Z"/>
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M59,59 L69,59 L67,108 L57,108 Z"/>
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M76,59 L86,59 L88,108 L79,108 Z"/>
+
+    <!-- Ojos -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,78
+            a2.8,2.8 0 1,1 5.6,0
+            a2.8,2.8 0 1,1 -5.6,0z"/>
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M71,78
+            a2.8,2.8 0 1,1 5.6,0
+            a2.8,2.8 0 1,1 -5.6,0z"/>
+
+    <!-- Sonrisa -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M54,91 Q64,100 74,91"/>
+
+</vector>
