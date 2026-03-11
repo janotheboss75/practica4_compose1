@@ -35,7 +35,7 @@ fun FilmsScreen(
             items(items = sampleFilms){
                 film ->
                 FilmCard(film,{
-                    onFilmClick(1)
+                    onFilmClick(film.id)
                 })
             }
         }
