@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.dp
 import valdez.alejandro.compose.R
 
 @Composable
-fun LoginScreen(){
+fun LoginScreen(onLogginSuccess : () -> Unit){
     var username by remember() { mutableStateOf("") }
     var password by remember() { mutableStateOf("") }
 
@@ -67,7 +67,9 @@ fun LoginScreen(){
         )
         Spacer(modifier = Modifier.height(18.dp))
         Button(
-            onClick = {},
+            onClick = {
+                onLogginSuccess()
+            },
             modifier = Modifier.fillMaxWidth()
         ){
             Text(text = "Entrar")
@@ -78,6 +80,6 @@ fun LoginScreen(){
 @Preview(showBackground = true)
 @Composable
 fun LoginScreenPreview(){
-    LoginScreen()
+    LoginScreen({})
 }
 
