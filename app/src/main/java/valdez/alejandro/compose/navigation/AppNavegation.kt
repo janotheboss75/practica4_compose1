@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import valdez.alejandro.compose.ui.components.FilmCard
+import valdez.alejandro.compose.ui.components.DetailFilmCard
 import valdez.alejandro.compose.ui.screens.FilmsScreen
 import valdez.alejandro.compose.ui.screens.LoginScreen
 
@@ -17,7 +17,23 @@ fun AppNavigation(){
             LoginScreen(onLogginSuccess = {navController.navigate(Routes.FILMS_SCREEN)})
         }
         composable(Routes.FILMS_SCREEN){
-            FilmsScreen()
+            FilmsScreen(
+                onFilmClick = { filmId ->
+                    navController.navigate(Routes.detailFilmRoute(filmId))
+                }
+            )
+        }
+        composable(Routes.DETAIL_FILM_SCREEN) { backStackEntry ->
+            val filmId = backStackEntry.arguments?.getString("filmId")?.toIntOrNull()
+
+            if (filmId != null) {
+                DetailFilmCard(
+                    filmId = filmId,
+                    onClick = {
+                        navController.popBackStack()
+                    }
+                )
+            }
         }
     }
 }
@@ -26,4 +42,8 @@ fun AppNavigation(){
 object Routes{
     const val  LOGIN_SCREEN = "login"
     const val FILMS_SCREEN = "list"
+
+    const val DETAIL_FILM_SCREEN = "detail/{filmId}"
+
+    fun detailFilmRoute(filmId: Int) = "detail/$filmId"
 }

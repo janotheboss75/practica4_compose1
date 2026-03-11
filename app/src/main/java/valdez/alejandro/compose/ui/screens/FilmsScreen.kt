@@ -17,7 +17,9 @@ import valdez.alejandro.compose.model.sampleFilms
 import valdez.alejandro.compose.ui.components.FilmCard
 
 @Composable
-fun FilmsScreen(){
+fun FilmsScreen(
+    onFilmClick: (Int) -> Unit
+){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -32,7 +34,9 @@ fun FilmsScreen(){
         LazyColumn(){
             items(items = sampleFilms){
                 film ->
-                FilmCard(film)
+                FilmCard(film,{
+                    onFilmClick(1)
+                })
             }
         }
     }
@@ -41,5 +45,5 @@ fun FilmsScreen(){
 @Preview(showBackground = true)
 @Composable
 fun FilmsScreenPreview(){
-    FilmsScreen()
+    FilmsScreen({})
 }

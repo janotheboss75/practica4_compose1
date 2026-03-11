@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -25,7 +26,9 @@ import valdez.alejandro.compose.R
 import valdez.alejandro.compose.model.Film
 
 @Composable
-fun FilmCard(film : Film){
+fun FilmCard(film : Film,
+             onClick: () -> Unit
+){
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -51,6 +54,12 @@ fun FilmCard(film : Film){
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(text= film.description)
+                Button(
+                    onClick = onClick,
+                    modifier = Modifier.fillMaxWidth()
+                ){
+                    Text(text = "Detalles")
+                }
             }
         }
     }
@@ -59,5 +68,5 @@ fun FilmCard(film : Film){
 @Preview(showBackground = true)
 @Composable
 fun FilmCardPreview(){
-    FilmCard(Film(id=1, title = "Titanic", description = "Romantic movie", imageRes = R.drawable.titanic))
+    FilmCard(Film(id=1, title = "Titanic", description = "Romantic movie", imageRes = R.drawable.titanic),{})
 }
